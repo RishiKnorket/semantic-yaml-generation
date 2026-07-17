@@ -1,0 +1,65 @@
+---
+cubes:
+- name: products
+  sql_table: neonjulymaulik.public.products
+  dimensions:
+  - name: brand
+    sql: brand
+    type: string
+    primary_key: false
+  - name: category
+    sql: category
+    type: string
+    primary_key: false
+  - name: list_price
+    sql: list_price
+    type: string
+    primary_key: false
+  - name: product_id
+    sql: product_id
+    type: string
+    primary_key: true
+  - name: product_name
+    sql: product_name
+    type: string
+    primary_key: false
+  - name: subcategory
+    sql: subcategory
+    type: string
+    primary_key: false
+  - name: supplier_id
+    sql: supplier_id
+    type: string
+    primary_key: true
+  - name: unit_cost
+    sql: unit_cost
+    type: string
+    primary_key: false
+  measures:
+  - name: avg_list_price
+    type: avg
+    sql: list_price
+  - name: avg_unit_cost
+    type: avg
+    sql: unit_cost
+  - name: max_list_price
+    type: max
+    sql: list_price
+  - name: max_unit_cost
+    type: max
+    sql: unit_cost
+  - name: min_list_price
+    type: min
+    sql: list_price
+  - name: min_unit_cost
+    type: min
+    sql: unit_cost
+  - name: row_count
+    type: count
+    sql:
+  - name: sum_list_price
+    type: sum
+    sql: list_price
+  - name: sum_unit_cost
+    type: sum
+    sql: unit_cost
