@@ -1,0 +1,69 @@
+---
+cubes:
+- name: sales_order_items
+  sql_table: neonjulymaulik.public.sales_order_items
+  dimensions:
+  - name: discount_pct
+    sql: discount_pct
+    type: string
+    primary_key: false
+  - name: order_id
+    sql: order_id
+    type: string
+    primary_key: true
+  - name: order_item_id
+    sql: order_item_id
+    type: string
+    primary_key: true
+  - name: product_id
+    sql: product_id
+    type: string
+    primary_key: true
+  - name: quantity
+    sql: quantity
+    type: string
+    primary_key: false
+  - name: unit_price
+    sql: unit_price
+    type: string
+    primary_key: false
+  measures:
+  - name: avg_discount_pct
+    type: avg
+    sql: discount_pct
+  - name: avg_quantity
+    type: avg
+    sql: quantity
+  - name: avg_unit_price
+    type: avg
+    sql: unit_price
+  - name: max_discount_pct
+    type: max
+    sql: discount_pct
+  - name: max_quantity
+    type: max
+    sql: quantity
+  - name: max_unit_price
+    type: max
+    sql: unit_price
+  - name: min_discount_pct
+    type: min
+    sql: discount_pct
+  - name: min_quantity
+    type: min
+    sql: quantity
+  - name: min_unit_price
+    type: min
+    sql: unit_price
+  - name: row_count
+    type: count
+    sql:
+  - name: sum_discount_pct
+    type: sum
+    sql: discount_pct
+  - name: sum_quantity
+    type: sum
+    sql: quantity
+  - name: sum_unit_price
+    type: sum
+    sql: unit_price
