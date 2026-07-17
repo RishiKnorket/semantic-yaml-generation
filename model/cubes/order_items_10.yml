@@ -1,0 +1,69 @@
+---
+cubes:
+- name: order_items_10
+  sql_table: neonrishitestcube.main.order_items_10
+  dimensions:
+  - name: is_drink_item
+    sql: is_drink_item
+    type: boolean
+    primary_key: false
+  - name: is_food_item
+    sql: is_food_item
+    type: boolean
+    primary_key: false
+  - name: order_id
+    sql: order_id
+    type: string
+    primary_key: true
+  - name: order_item_id
+    sql: order_item_id
+    type: string
+    primary_key: true
+  - name: ordered_at
+    sql: ordered_at
+    type: time
+    primary_key: false
+  - name: product_id
+    sql: product_id
+    type: string
+    primary_key: true
+  - name: product_name
+    sql: product_name
+    type: string
+    primary_key: false
+  - name: product_price
+    sql: product_price
+    type: string
+    primary_key: false
+  - name: supply_cost
+    sql: supply_cost
+    type: string
+    primary_key: false
+  measures:
+  - name: avg_product_price
+    type: avg
+    sql: product_price
+  - name: avg_supply_cost
+    type: avg
+    sql: supply_cost
+  - name: max_product_price
+    type: max
+    sql: product_price
+  - name: max_supply_cost
+    type: max
+    sql: supply_cost
+  - name: min_product_price
+    type: min
+    sql: product_price
+  - name: min_supply_cost
+    type: min
+    sql: supply_cost
+  - name: row_count
+    type: count
+    sql:
+  - name: sum_product_price
+    type: sum
+    sql: product_price
+  - name: sum_supply_cost
+    type: sum
+    sql: supply_cost
